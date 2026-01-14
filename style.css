@@ -1,130 +1,174 @@
+/* ---------- THEME VARIABLES ---------- */
+:root {
+  --bg-main: linear-gradient(120deg, #020617, #0f172a);
+  --bg-glass: rgba(255,255,255,0.06);
+  --text-main: #e5e7eb;
+  --accent: #38bdf8;
+  --card-bg: rgba(255,255,255,0.05);
+}
+
+html[data-theme="light"] {
+  --bg-main: linear-gradient(120deg, #f8fafc, #e5e7eb);
+  --bg-glass: rgba(0,0,0,0.05);
+  --text-main: #020617;
+  --accent: #2563eb;
+  --card-bg: rgba(0,0,0,0.04);
+}
+
+/* ---------- BASE ---------- */
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(120deg, #020617, #0f172a);
-  color: #e5e7eb;
+  background: var(--bg-main);
+  color: var(--text-main);
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
+/* Resume Button */
+.resume-float {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: #020617;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: var(--card-bg);
+  color: var(--text-main);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Hero */
 .hero {
-  padding: 70px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .hero-card {
-  max-width: 950px;
+  max-width: 960px;
   margin: auto;
-  background: rgba(255,255,255,0.06);
+  background: var(--bg-glass);
   backdrop-filter: blur(14px);
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 40px;
 }
 
-.profile-pic {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 4px solid #38bdf8;
+/* Profile Image */
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
   margin-bottom: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-pic:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(56,189,248,0.6);
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-main);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.35s ease;
 }
 
-.hero h1 {
-  font-size: 36px;
+.profile-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #22c55e);
+  filter: blur(6px);
+  z-index: 1;
 }
 
-.hero h2 {
-  font-size: 18px;
-  font-weight: normal;
-  margin-top: 8px;
+.profile-wrapper:hover .profile-pic {
+  transform: scale(1.06);
 }
 
-.hero p {
-  margin-top: 8px;
-  opacity: 0.85;
-}
+/* Typography */
+.hero h1 { font-size: 34px; }
+.hero h2 { font-size: 17px; margin-top: 6px; font-weight: normal; }
+.hero p  { margin-top: 6px; opacity: 0.85; }
 
-.hero-actions {
-  margin-top: 20px;
-}
-
-.socials {
-  margin-top: 15px;
-}
-
-.socials a {
-  margin: 0 10px;
-  color: #38bdf8;
-  text-decoration: none;
-  font-weight: 500;
-}
-
+/* Buttons & Links */
 .btn {
-  padding: 12px 18px;
+  padding: 11px 18px;
   border-radius: 8px;
   text-decoration: none;
-  margin: 6px;
-  display: inline-block;
 }
 
 .primary {
-  background: #38bdf8;
+  background: var(--accent);
   color: #020617;
   font-weight: bold;
 }
 
 .secondary {
-  border: 1px solid #38bdf8;
-  color: #38bdf8;
+  border: 1px solid var(--accent);
+  color: var(--accent);
 }
 
+.socials a {
+  margin: 0 10px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Sections */
 .section {
   max-width: 1000px;
-  margin: 40px auto;
+  margin: 36px auto;
   padding: 0 20px;
 }
 
 .glass {
-  background: rgba(255,255,255,0.06);
+  background: var(--bg-glass);
   backdrop-filter: blur(12px);
-  padding: 30px;
+  padding: 28px;
   border-radius: 16px;
 }
 
 .section h3 {
-  margin-bottom: 18px;
-  color: #38bdf8;
+  margin-bottom: 16px;
+  color: var(--accent);
+}
+
+/* Cards */
+.timeline .card {
+  background: var(--card-bg);
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 14px;
 }
 
 .chips span {
   display: inline-block;
-  background: rgba(255,255,255,0.1);
-  padding: 8px 12px;
+  background: var(--card-bg);
+  padding: 7px 12px;
   margin: 6px;
   border-radius: 20px;
 }
 
-.metrics li {
+.projects li {
   list-style: none;
   margin-bottom: 10px;
 }
 
-.timeline .card {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 16px;
-}
-
-.projects li {
-  list-style: none;
-  margin-bottom: 12px;
-}
-
+/* Contact */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -134,13 +178,8 @@ body {
   border: none;
 }
 
-.note {
-  font-size: 13px;
-  opacity: 0.7;
-}
-
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 28px;
   opacity: 0.6;
 }
