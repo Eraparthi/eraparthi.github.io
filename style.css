@@ -1,107 +1,139 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
-  background: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #020617, #0f172a);
+  color: #e5e7eb;
 }
 
 .hero {
-  background: linear-gradient(135deg, #0f172a, #020617);
-  color: white;
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-.hero-inner {
+.hero-card {
   max-width: 900px;
   margin: auto;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 40px;
 }
 
-.profile {
+.profile-pic {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 4px solid #ffffff;
+  border: 4px solid #38bdf8;
   margin-bottom: 15px;
 }
 
 .hero h1 {
-  font-size: 34px;
+  font-size: 36px;
 }
 
 .hero h2 {
   font-size: 18px;
   font-weight: normal;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .hero p {
   margin-top: 10px;
-  font-size: 14px;
-  opacity: 0.9;
+  opacity: 0.85;
+}
+
+.hero-actions {
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin: 6px;
+  display: inline-block;
+}
+
+.primary {
+  background: #38bdf8;
+  color: #020617;
+  font-weight: bold;
+}
+
+.secondary {
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
 }
 
 .section {
-  max-width: 950px;
-  margin: 40px auto;
+  max-width: 1000px;
+  margin: 60px auto;
   padding: 0 20px;
 }
 
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+}
+
 .section h3 {
-  margin-bottom: 15px;
-  color: #0f172a;
+  margin-bottom: 20px;
+  color: #38bdf8;
 }
 
-.skills, .projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skills li, .projects li {
-  list-style: none;
-  background: #e5e7eb;
+.chips span {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
   padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 14px;
+  margin: 6px;
+  border-radius: 20px;
 }
 
 .metrics li {
   list-style: none;
-  background: #f1f5f9;
-  padding: 10px;
-  border-left: 4px solid #0f172a;
   margin-bottom: 10px;
 }
 
-.job {
-  margin-bottom: 25px;
+.timeline .card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
-.job h4 {
-  color: #1e293b;
+.projects li {
+  list-style: none;
+  margin-bottom: 8px;
 }
 
-.job span {
+.edu span {
+  display: block;
+  opacity: 0.8;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.note {
   font-size: 13px;
-  color: #555;
-}
-
-.contact a {
-  color: #2563eb;
-  text-decoration: none;
+  opacity: 0.7;
+  margin-top: 10px;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background: #e5e7eb;
-  margin-top: 40px;
-  font-size: 14px;
+  padding: 30px;
+  opacity: 0.6;
 }
