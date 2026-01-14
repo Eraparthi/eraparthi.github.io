@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<!-- 🔹 Top Header -->
+<!-- ================= TOP HEADER ================= -->
 <header class="top-header">
   <span class="site-name">Eswara Raparthi</span>
 
@@ -44,7 +44,7 @@
   </div>
 </header>
 
-<!-- 🔹 Hero Section -->
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-card">
 
@@ -70,6 +70,7 @@
   </div>
 </section>
 
+<!-- ================= SUMMARY ================= -->
 <section class="section glass">
   <h3>Professional Summary</h3>
   <p>
@@ -81,6 +82,7 @@
   </p>
 </section>
 
+<!-- ================= SKILLS ================= -->
 <section class="section">
   <h3>Core Expertise</h3>
   <div class="chips">
@@ -96,6 +98,7 @@
   </div>
 </section>
 
+<!-- ================= EXPERIENCE ================= -->
 <section class="section glass">
   <h3>Professional Experience</h3>
 
@@ -105,7 +108,8 @@
     <p>
       Owns production stability of OSS platforms including Ericsson Granite and Order Care.
       Final escalation point for complex OSS issues. Actively adopts modern tooling and
-      AI-assisted techniques to build unified dashboards and automation for proactive L3 operations.
+      AI-assisted techniques to build unified dashboards and automation for proactive
+      L3 operations.
     </p>
   </div>
 
@@ -140,6 +144,7 @@
 
 </section>
 
+<!-- ================= INITIATIVES ================= -->
 <section class="section">
   <h3>Key L3 Contributions & Operational Initiatives</h3>
   <ul class="projects">
@@ -150,12 +155,23 @@
   </ul>
 </section>
 
-<section id="contact" class="section">
+<!-- ================= CONTACT (FORMSUBMIT) ================= -->
+<section id="contact" class="section glass">
   <h3>Contact</h3>
-  <form class="contact-form" onsubmit="sendMail(event)">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <textarea id="message" placeholder="Your Message" required></textarea>
+
+  <form class="contact-form"
+        action="https://formsubmit.co/eswararao.raparthi@gmail.com"
+        method="POST">
+
+    <!-- FormSubmit Config -->
+    <input type="hidden" name="_subject" value="New Portfolio Contact">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
     <button type="submit" class="btn primary">Send Message</button>
   </form>
 </section>
