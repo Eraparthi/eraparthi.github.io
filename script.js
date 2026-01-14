@@ -1,3 +1,17 @@
+// Theme persistence
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme) {
+  document.documentElement.setAttribute("data-theme", savedTheme);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute("data-theme");
+  const next = current === "dark" ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  localStorage.setItem("theme", next);
+}
+
+// Contact form
 function sendMail(event) {
   event.preventDefault();
 
@@ -6,12 +20,16 @@ function sendMail(event) {
   const phone = document.getElementById("phone").value;
   const message = document.getElementById("message").value;
 
-  const mailtoLink = `mailto:eswararao.raparthi@gmail.com
-?subject=Portfolio Contact from ${encodeURIComponent(name)}
-&body=Name: ${encodeURIComponent(name)}
-%0DEmail: ${encodeURIComponent(email)}
-%0DPhone: ${encodeURIComponent(phone)}
-%0D%0DMessage:%0D${encodeURIComponent(message)}`;
+  const mailtoLink =
+    "mailto:eswararao.raparthi@gmail.com" +
+    "?subject=Portfolio Contact - " + encodeURIComponent(name) +
+    "&body=" +
+    encodeURIComponent(
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n" +
+      "Phone: " + phone + "\n\n" +
+      message
+    );
 
   window.location.href = mailtoLink;
 }
