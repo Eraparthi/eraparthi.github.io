@@ -11,24 +11,47 @@
 </head>
 <body>
 
-<!-- 🔹 Top Navigation -->
-<nav class="top-nav">
-  <div class="nav-left">
-    <strong>Eswara Raparthi</strong>
-  </div>
-  <div class="nav-right">
-    <a href="Eswara Raparthi Latest Resume.docx" download>Resume</a>
-    <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/eraparthi" target="_blank">GitHub</a>
-    <button class="theme-toggle" onclick="toggleTheme()">🌙 / ☀️</button>
-  </div>
-</nav>
+<!-- 🔹 Top Header -->
+<header class="top-header">
+  <span class="site-name">Eswara Raparthi</span>
 
-<header class="hero">
+  <div class="header-actions">
+    <a href="Eswara Raparthi Latest Resume.docx"
+       download
+       class="resume-link">
+      Resume
+    </a>
+
+    <a href="https://www.linkedin.com/"
+       target="_blank"
+       class="header-icon"
+       title="LinkedIn">
+      🔗
+    </a>
+
+    <a href="https://github.com/eraparthi"
+       target="_blank"
+       class="header-icon"
+       title="GitHub">
+      💻
+    </a>
+
+    <button class="theme-toggle"
+            onclick="toggleTheme()"
+            title="Toggle theme">
+      🌙
+    </button>
+  </div>
+</header>
+
+<!-- 🔹 Hero Section -->
+<section class="hero">
   <div class="hero-card">
 
     <div class="profile-wrapper">
-      <img src="profile.JPG" class="profile-pic" alt="Eswara Rao Raparthi">
+      <img src="profile.JPG"
+           class="profile-pic"
+           alt="Eswara Rao Raparthi">
       <span class="profile-ring"></span>
     </div>
 
@@ -40,16 +63,20 @@
       Unified OSS Dashboards
     </p>
 
+    <div class="hero-actions">
+      <a href="#contact" class="btn secondary">Contact</a>
+    </div>
+
   </div>
-</header>
+</section>
 
 <section class="section glass">
   <h3>Professional Summary</h3>
   <p>
     Senior L3 OSS Engineer with 12+ years of experience across Telecom OSS platforms.
-    Acts as an OSS Subject Matter Expert responsible for production stability, complex
-    incident resolution, and long-term fixes. Strong focus on automation and unified
-    dashboards to improve visibility, predictability, and operational efficiency.
+    Acts as an OSS Subject Matter Expert responsible for production stability,
+    complex incident resolution, and permanent fixes. Focuses on automation and
+    unified dashboards to improve visibility, predictability, and operational efficiency.
     Experienced in both offshore and onsite customer-facing environments.
   </p>
 </section>
@@ -61,97 +88,73 @@
     <span>OSS SME</span>
     <span>Ericsson Granite</span>
     <span>Order Care</span>
-    <span>Fulfillment & Inventory</span>
+    <span>Inventory & Fulfillment</span>
     <span>Deep RCA</span>
     <span>Permanent Fix Design</span>
     <span>Automation (PL/SQL)</span>
     <span>Unified OSS Dashboards</span>
-    <span>FTTx / OSP / ISP</span>
   </div>
 </section>
 
 <section class="section glass">
   <h3>Professional Experience</h3>
 
-  <div class="timeline">
-
-    <!-- CURRENT -->
-    <div class="card">
-      <h4>Jio Platforms Limited</h4>
-      <span>Senior L3 OSS Engineer / OSS SME | 2022 – Present</span>
-      <p>
-        Owns production stability of OSS platforms including Ericsson Granite and Order Care.
-        Serves as the final escalation point for complex order, inventory, and integration issues.
-        Drives permanent fixes through deep data analysis and controlled remediation.
-        Actively adopts modern tooling and AI-assisted techniques to build unified dashboards
-        and intelligent automation for proactive L3 operations.
-      </p>
-    </div>
-
-    <!-- TCS -->
-    <div class="card">
-      <h4>Tata Consultancy Services</h4>
-      <span>L2 OSS Support – Offshore & Onsite (Saudi Arabia) | 2019 – 2022</span>
-      <p>
-        Supported OSS fulfillment platforms in both offshore and customer onsite roles.
-        Entrusted with customer-facing operations during onsite tenure, ensuring stable
-        OSS behavior and predictable delivery. Implemented automation and structured
-        analysis approaches that reduced resolution time and improved operational confidence.
-        Worked closely with client stakeholders and vendors to maintain low-risk operations.
-      </p>
-    </div>
-
-    <!-- RELIANCE JIO -->
-    <div class="card">
-      <h4>Reliance Jio Infocomm Limited</h4>
-      <span>OSS Support Engineer | 2015 – 2019</span>
-      <p>
-        Supported OSS domains including Microwave, POI, Small Cells, and OSP/ISP inventory.
-        Gained strong exposure to telecom network architecture, data integrity, and
-        end-to-end OSS workflows.
-      </p>
-    </div>
-
-    <!-- EARLY CAREER -->
-    <div class="card">
-      <h4>Earlier Career – GIS & Telecom Systems</h4>
-      <span>Engineer | 2012 – 2015</span>
-      <p>
-        Started career working on GIS and telecom-related systems, building a strong
-        foundation in data modeling, system integrations, and operational support
-        processes that later translated into OSS domain expertise.
-      </p>
-    </div>
-
+  <div class="card">
+    <h4>Jio Platforms Limited</h4>
+    <span>Senior L3 OSS Engineer / OSS SME | 2022 – Present</span>
+    <p>
+      Owns production stability of OSS platforms including Ericsson Granite and Order Care.
+      Final escalation point for complex OSS issues. Actively adopts modern tooling and
+      AI-assisted techniques to build unified dashboards and automation for proactive L3 operations.
+    </p>
   </div>
+
+  <div class="card">
+    <h4>Tata Consultancy Services</h4>
+    <span>L2 OSS Support – Offshore & Onsite (Saudi Arabia) | 2019 – 2022</span>
+    <p>
+      Supported OSS fulfillment systems in both offshore and onsite roles.
+      Entrusted with customer-facing production operations during onsite tenure.
+      Implemented automation and structured analysis to improve turnaround time
+      and operational confidence.
+    </p>
+  </div>
+
+  <div class="card">
+    <h4>Reliance Jio Infocomm Limited</h4>
+    <span>OSS Support Engineer | 2015 – 2019</span>
+    <p>
+      Supported OSS domains including Microwave, POI, Small Cells, and OSP/ISP inventory.
+      Built strong foundation in OSS data models and telecom workflows.
+    </p>
+  </div>
+
+  <div class="card">
+    <h4>Earlier Career – GIS & Telecom Systems</h4>
+    <span>Engineer | 2012 – 2015</span>
+    <p>
+      Worked on GIS and telecom-related systems, developing strong fundamentals
+      in data modeling, integrations, and operational support.
+    </p>
+  </div>
+
 </section>
 
 <section class="section">
   <h3>Key L3 Contributions & Operational Initiatives</h3>
   <ul class="projects">
-    <li>Stabilized high-impact OSS workflows by addressing deep-rooted data and inventory issues</li>
-    <li>Designed permanent fixes to eliminate recurring incidents and reduce escalations</li>
-    <li>Built reusable automation utilities to improve L3 efficiency and reduce manual risk</li>
-    <li>Created unified, forward-looking dashboards to enhance visibility across OSS layers</li>
-    <li>Improved SOPs and operational patterns to support predictable production behavior</li>
+    <li>Stabilized critical OSS workflows by resolving deep-rooted data inconsistencies</li>
+    <li>Designed permanent fixes to eliminate repeat production incidents</li>
+    <li>Developed automation utilities to reduce manual effort and operational risk</li>
+    <li>Built unified dashboards to enhance visibility across OSS layers</li>
   </ul>
-</section>
-
-<section class="section glass">
-  <h3>Education</h3>
-  <p>
-    <strong>B.Tech – Electronics & Communication Engineering</strong><br>
-    Jawaharlal Nehru Technological University (JNTU), Kakinada
-  </p>
 </section>
 
 <section id="contact" class="section">
   <h3>Contact</h3>
-
   <form class="contact-form" onsubmit="sendMail(event)">
     <input type="text" id="name" placeholder="Your Name" required>
     <input type="email" id="email" placeholder="Your Email" required>
-    <input type="tel" id="phone" placeholder="Your Phone Number">
     <textarea id="message" placeholder="Your Message" required></textarea>
     <button type="submit" class="btn primary">Send Message</button>
   </form>
