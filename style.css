@@ -1,3 +1,32 @@
+/* Top Navigation */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+.nav-right a {
+  margin-right: 14px;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.theme-toggle {
+  margin-left: 10px;
+  background: var(--card-bg);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 /* ---------- THEME VARIABLES ---------- */
 :root {
   --bg-main: linear-gradient(120deg, #020617, #0f172a);
