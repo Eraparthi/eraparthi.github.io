@@ -6,12 +6,12 @@ body {
 }
 
 .hero {
-  padding: 80px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
 .hero-card {
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
   background: rgba(255,255,255,0.06);
   backdrop-filter: blur(14px);
@@ -25,6 +25,12 @@ body {
   border-radius: 50%;
   border: 4px solid #38bdf8;
   margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(56,189,248,0.6);
 }
 
 .hero h1 {
@@ -34,16 +40,27 @@ body {
 .hero h2 {
   font-size: 18px;
   font-weight: normal;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .hero p {
-  margin-top: 10px;
+  margin-top: 8px;
   opacity: 0.85;
 }
 
 .hero-actions {
-  margin-top: 25px;
+  margin-top: 20px;
+}
+
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .btn {
@@ -67,7 +84,7 @@ body {
 
 .section {
   max-width: 1000px;
-  margin: 60px auto;
+  margin: 40px auto;
   padding: 0 20px;
 }
 
@@ -79,7 +96,7 @@ body {
 }
 
 .section h3 {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   color: #38bdf8;
 }
 
@@ -100,36 +117,26 @@ body {
   background: rgba(255,255,255,0.05);
   padding: 20px;
   border-radius: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .projects li {
   list-style: none;
-  margin-bottom: 8px;
-}
-
-.edu span {
-  display: block;
-  opacity: 0.8;
+  margin-bottom: 12px;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   border-radius: 8px;
   border: none;
-}
-
-.contact-form textarea {
-  resize: vertical;
 }
 
 .note {
   font-size: 13px;
   opacity: 0.7;
-  margin-top: 10px;
 }
 
 footer {
