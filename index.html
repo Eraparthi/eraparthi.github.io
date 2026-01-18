@@ -1,123 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>Eswara Rao Raparthi | Inventory & Orchestration Engineer</title>
+  <title>Eswara Rao Raparthi | Inventory & OSS Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <meta name="description"
-        content="Senior Engineer specializing in Inventory Applications, Open Source Inventory platforms, and Orchestration systems.">
+        content="Senior Engineer specializing in Inventory Applications, Open Source Inventory, Orchestration, and OSS platforms.">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= VIDEO POPUP ================= -->
-<div id="videoPopup" class="popup-overlay">
-  <div class="popup-box">
-    <button class="close-btn" onclick="closePopup()">✕</button>
+<!-- ================= INTRO VIDEO POPUP ================= -->
+<div id="introModal" class="modal">
+  <div class="modal-box">
+    <button class="close-btn" onclick="closeIntro()">Skip</button>
 
-    <video id="introVideo" controls>
+    <video id="introVideo"
+           muted
+           autoplay
+           playsinline
+           preload="auto">
       <source src="intro.MOV" type="video/mp4">
-      Your browser does not support video.
     </video>
 
-    <div class="popup-text">
-      <h3>Eswara Rao Raparthi</h3>
-      <p>Inventory Applications · Open Source Inventory · Orchestration</p>
+    <div class="modal-caption">
+      <strong>Eswara Rao Raparthi</strong><br>
+      Inventory · Open Source Inventory · Orchestration · OSS
     </div>
   </div>
 </div>
 
 <!-- ================= HEADER ================= -->
-<header class="header">
-  <span class="logo">Eswara Raparthi</span>
+<header class="top-header">
+  <span class="site-name">Eswara Raparthi</span>
+
+  <div class="header-actions">
+    <a href="Eswara Raparthi Latest Resume.docx" download class="resume-link">
+      Resume
+    </a>
+
+    <a href="https://www.linkedin.com/"
+       target="_blank"
+       class="header-icon"
+       title="LinkedIn">
+      🔗
+    </a>
+  </div>
 </header>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-card">
-    <img src="profile.JPG" class="profile-pic" alt="Eswara Rao Raparthi">
+
+    <div class="profile-wrapper">
+      <img src="profile.JPG" class="profile-pic" alt="Eswara Rao Raparthi">
+      <span class="profile-ring"></span>
+    </div>
 
     <h1>Eswara Rao Raparthi</h1>
-    <h2>Senior Inventory & Orchestration Engineer</h2>
+    <h2>Senior Inventory, Orchestration & OSS Engineer</h2>
 
     <p>
-      Specialized in large-scale inventory applications, open-source inventory platforms,
-      and service orchestration systems that power telecom and enterprise networks.
+      Inventory Applications · Open Source Inventory · Service Orchestration ·
+      OSS Stability · Automation · Data Accuracy
     </p>
 
-    <a href="#contact" class="btn">Contact</a>
+    <a href="#contact" class="btn secondary">Contact</a>
   </div>
 </section>
 
 <!-- ================= SUMMARY ================= -->
-<section class="section">
+<section class="section glass">
   <h3>Professional Summary</h3>
   <p>
-    Senior engineer with 12+ years of experience working on inventory-centric platforms
-    and orchestration systems. Strong expertise in designing, stabilizing, and enhancing
-    inventory applications that serve as the foundation for provisioning, fulfillment,
-    and service lifecycle management. Hands-on experience with open-source inventory
-    solutions and complex data models.
+    Senior engineer with 12+ years of experience across telecom OSS platforms,
+    with deep specialization in inventory applications and orchestration systems.
+    Strong hands-on expertise in open-source inventory platforms, inventory data
+    modeling, order decomposition, and production stability. Known for resolving
+    complex inventory inconsistencies and building long-term fixes through
+    automation and structured analysis.
   </p>
 </section>
 
 <!-- ================= SKILLS ================= -->
 <section class="section">
   <h3>Core Expertise</h3>
-  <ul class="skills">
-    <li>Inventory Applications (Network & Service)</li>
-    <li>Open Source Inventory Platforms</li>
-    <li>Service & Resource Orchestration</li>
-    <li>Inventory Data Modeling</li>
-    <li>Order Decomposition & Fulfillment</li>
-    <li>Production Support & Root Cause Analysis</li>
-    <li>Automation & Data Fixes</li>
-  </ul>
+  <div class="chips">
+    <span>Inventory Applications</span>
+    <span>Open Source Inventory Platforms</span>
+    <span>Service & Resource Orchestration</span>
+    <span>OSS Fulfillment Systems</span>
+    <span>Inventory Data Modeling</span>
+    <span>Order Decomposition</span>
+    <span>Production Support (L2/L3)</span>
+    <span>Automation & Data Fixes</span>
+  </div>
 </section>
 
 <!-- ================= EXPERIENCE ================= -->
-<section class="section">
-  <h3>Experience Highlights</h3>
+<section class="section glass">
+  <h3>Professional Experience</h3>
 
   <div class="card">
     <h4>Jio Platforms Limited</h4>
     <span>Senior Engineer | 2022 – Present</span>
     <p>
-      Working extensively on large-scale inventory applications and orchestration
-      workflows supporting nationwide telecom services. Responsible for production
-      stability, complex inventory issues, and improvements in orchestration reliability.
+      Working on large-scale inventory and orchestration platforms supporting
+      nationwide telecom services. Responsible for production stability, complex
+      inventory defects, orchestration failures, and system improvements across
+      OSS fulfillment layers.
     </p>
   </div>
 
   <div class="card">
     <h4>Tata Consultancy Services</h4>
-    <span>Support Engineer (Offshore & Onsite – Saudi Arabia)</span>
+    <span>Support Engineer – Offshore & Onsite (Saudi Arabia) | 2019 – 2022</span>
     <p>
       Supported customer-facing inventory and orchestration systems.
-      Worked closely with clients to resolve critical inventory inconsistencies
-      and improve provisioning success rates.
+      Played a key role in resolving critical inventory mismatches and improving
+      provisioning success through automation and structured RCA.
+    </p>
+  </div>
+
+  <div class="card">
+    <h4>Reliance Jio Infocomm Limited</h4>
+    <span>OSS Support Engineer | 2015 – 2019</span>
+    <p>
+      Supported OSS inventory domains including Microwave, POI, Small Cells,
+      and OSP/ISP inventory systems, building a strong foundation in telecom
+      inventory workflows.
     </p>
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="section contact">
-  <h3>Contact</h3>
-  <p>
-    For discussions related to inventory platforms, orchestration systems,
-    or engineering roles, feel free to reach out.
+<section id="contact" class="section glass contact-advanced">
+  <h3>Contact Me</h3>
+  <p class="contact-sub">
+    For opportunities or discussions related to inventory platforms,
+    orchestration systems, or OSS engineering roles.
   </p>
 
-  <form action="https://formsubmit.co/eswararao.raparthi@gmail.com" method="POST">
+  <form class="contact-form"
+        action="https://formsubmit.co/eswararao.raparthi@gmail.com"
+        method="POST">
+
     <input type="hidden" name="_captcha" value="false">
 
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
+    <div class="form-grid">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+    </div>
 
-    <button type="submit">Send Message</button>
+    <textarea name="message"
+              placeholder="Your message"
+              required></textarea>
+
+    <button type="submit" class="btn primary big">
+      Send Message
+    </button>
   </form>
 </section>
 
