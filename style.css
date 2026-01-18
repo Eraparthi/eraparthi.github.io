@@ -1,104 +1,28 @@
-:root {
-  --accent: #38bdf8;
-  --bg-dark: #020617;
-  --glass: rgba(255,255,255,.06);
-  --text: #e5e7eb;
-}
-
-* { box-sizing: border-box; }
-
 body {
   margin: 0;
-  background: linear-gradient(135deg,#020617,#0f172a);
-  color: var(--text);
-  font-family: "Segoe UI", system-ui;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
 }
 
-/* ================= INTRO MODAL ================= */
-.intro-modal {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at top,rgba(56,189,248,.15),rgba(2,6,23,.95));
-  backdrop-filter: blur(18px);
-  z-index: 3000;
-}
-
-.intro-card {
-  width: 420px;
-  max-width: 90%;
+/* HEADER */
+.header {
+  padding: 14px 20px;
   background: #020617;
-  border-radius: 22px;
-  padding: 18px;
-  box-shadow: 0 0 80px rgba(56,189,248,.35);
-  position: relative;
 }
 
-/* CINEMATIC CROP */
-.intro-frame {
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(56,189,248,.35);
-}
-
-.intro-frame video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* 🔥 CROPS RAW CAMERA */
-  transform: scale(1.08); /* 🔥 CINEMATIC ZOOM */
-}
-
-/* TEXT OVERLAY */
-.intro-overlay {
-  margin-top: 12px;
-  text-align: center;
-}
-
-.intro-overlay h2 {
-  margin: 6px 0 2px;
-}
-
-.intro-overlay p {
-  font-size: 13px;
-  opacity: .85;
-}
-
-/* SKIP BUTTON */
-.skip-btn {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  border-radius: 16px;
-  padding: 4px 10px;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-/* ================= HERO ================= */
-.hidden { display: none; }
-
+/* HERO */
 .hero {
-  padding: 70px 20px;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .hero-card {
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
-  background: var(--glass);
-  border-radius: 22px;
-  padding: 42px;
-  text-align: center;
-}
-
-.profile-wrapper {
-  position: relative;
-  display: inline-block;
+  background: #020617;
+  padding: 40px;
+  border-radius: 14px;
 }
 
 .profile-pic {
@@ -108,24 +32,78 @@ body {
   object-fit: cover;
 }
 
-.profile-ring {
-  position: absolute;
-  inset: -8px;
-  border-radius: 50%;
-  background: linear-gradient(135deg,var(--accent),#22c55e);
-  filter: blur(10px);
-  z-index: -1;
+/* SECTIONS */
+.section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
 }
 
-/* ================= BUTTON ================= */
-.btn {
-  display: inline-block;
-  padding: 12px 22px;
+.card {
+  background: #020617;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 16px;
+}
+
+.skills li {
+  margin-bottom: 8px;
+}
+
+/* CONTACT */
+.contact form {
+  max-width: 500px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+/* BUTTON */
+.btn,
+button {
+  padding: 12px 20px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* POPUP */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-box {
+  background: #020617;
+  padding: 20px;
+  border-radius: 14px;
+  width: 420px;
+  max-width: 90%;
+  position: relative;
+}
+
+.popup-box video {
+  width: 100%;
   border-radius: 10px;
-  text-decoration: none;
 }
 
-.secondary {
-  border: 1px solid var(--accent);
-  color: var(--accent);
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
 }
