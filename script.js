@@ -1,4 +1,4 @@
-/* THEME */
+/* ================= THEME ================= */
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   document.documentElement.setAttribute("data-theme", savedTheme);
@@ -11,7 +11,7 @@ function toggleTheme() {
   localStorage.setItem("theme", next);
 }
 
-/* VIDEO MODAL */
+/* ================= VIDEO MODAL ================= */
 const modal = document.getElementById("introModal");
 const video = document.getElementById("introVideo");
 
@@ -33,10 +33,12 @@ window.onload = () => {
   }
 };
 
-/* SCROLL REVEAL */
+/* ================= SCROLL REVEAL ================= */
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add("show");
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
   });
 }, { threshold: 0.15 });
 
