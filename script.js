@@ -1,4 +1,4 @@
-// Theme persistence
+/* ================= THEME ================= */
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   document.documentElement.setAttribute("data-theme", savedTheme);
@@ -11,25 +11,37 @@ function toggleTheme() {
   localStorage.setItem("theme", next);
 }
 
-// Contact form
-function sendMail(event) {
-  event.preventDefault();
+/* ================= VIDEO MODAL ================= */
+const modal = document.getElementById("introModal");
+const video = document.getElementById("introVideo");
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const message = document.getElementById("message").value;
-
-  const mailtoLink =
-    "mailto:eswararao.raparthi@gmail.com" +
-    "?subject=Portfolio Contact - " + encodeURIComponent(name) +
-    "&body=" +
-    encodeURIComponent(
-      "Name: " + name + "\n" +
-      "Email: " + email + "\n" +
-      "Phone: " + phone + "\n\n" +
-      message
-    );
-
-  window.location.href = mailtoLink;
+function openIntro() {
+  modal.style.display = "flex";
+  video.currentTime = 0;
+  video.play();
+  sessionStorage.setItem("introShown", "yes");
 }
+
+function closeIntro() {
+  modal.style.display = "none";
+  video.pause();
+}
+
+window.addEventListener("load", () => {
+  if (!sessionStorage.getItem("introShown")) {
+    openIntro();
+  }
+});
+
+/* ================= SCROLL REVEAL ================= */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll(".reveal").forEach(el => {
+  observer.observe(el);
+});
