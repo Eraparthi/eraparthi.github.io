@@ -8,5 +8,5 @@ function closeIntro() {
 
 video.addEventListener("ended", closeIntro);
 
-// failsafe in case autoplay is blocked
+// safety fallback
 setTimeout(closeIntro, 15000);
