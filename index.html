@@ -1,53 +1,124 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Eswara Rao Raparthi | Senior L3 OSS Engineer</title>
+  <title>Eswara Rao Raparthi | Inventory & Orchestration Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Senior Engineer specializing in Inventory Applications, Open Source Inventory platforms, and Orchestration systems.">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= INTRO MODAL ================= -->
-<div id="introModal" class="intro-modal">
-  <div class="intro-card">
-    <div class="intro-frame">
-      <video id="introVideo" muted playsinline>
-        <source src="intro.MOV" type="video/mp4">
-      </video>
-    </div>
+<!-- ================= VIDEO POPUP ================= -->
+<div id="videoPopup" class="popup-overlay">
+  <div class="popup-box">
+    <button class="close-btn" onclick="closePopup()">✕</button>
 
-    <div class="intro-overlay">
-      <h2>Eswara Rao Raparthi</h2>
-      <p>Senior L3 OSS Engineer · OSS SME · Automation</p>
-    </div>
+    <video id="introVideo" controls>
+      <source src="intro.MOV" type="video/mp4">
+      Your browser does not support video.
+    </video>
 
-    <button class="skip-btn" onclick="closeIntro()">Skip Intro</button>
+    <div class="popup-text">
+      <h3>Eswara Rao Raparthi</h3>
+      <p>Inventory Applications · Open Source Inventory · Orchestration</p>
+    </div>
   </div>
 </div>
 
 <!-- ================= HEADER ================= -->
-<header class="top-header">
-  <span class="site-name">Eswara Raparthi</span>
+<header class="header">
+  <span class="logo">Eswara Raparthi</span>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero hidden">
+<section class="hero">
   <div class="hero-card">
-    <div class="profile-wrapper">
-      <img src="profile.JPG" class="profile-pic">
-      <span class="profile-ring"></span>
-    </div>
+    <img src="profile.JPG" class="profile-pic" alt="Eswara Rao Raparthi">
 
     <h1>Eswara Rao Raparthi</h1>
-    <h2>Senior L3 OSS Engineer | OSS SME</h2>
+    <h2>Senior Inventory & Orchestration Engineer</h2>
 
     <p>
-      Production Stability · Deep RCA · Automation · Unified OSS Dashboards
+      Specialized in large-scale inventory applications, open-source inventory platforms,
+      and service orchestration systems that power telecom and enterprise networks.
     </p>
 
-    <a href="#contact" class="btn secondary">Contact</a>
+    <a href="#contact" class="btn">Contact</a>
   </div>
+</section>
+
+<!-- ================= SUMMARY ================= -->
+<section class="section">
+  <h3>Professional Summary</h3>
+  <p>
+    Senior engineer with 12+ years of experience working on inventory-centric platforms
+    and orchestration systems. Strong expertise in designing, stabilizing, and enhancing
+    inventory applications that serve as the foundation for provisioning, fulfillment,
+    and service lifecycle management. Hands-on experience with open-source inventory
+    solutions and complex data models.
+  </p>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="section">
+  <h3>Core Expertise</h3>
+  <ul class="skills">
+    <li>Inventory Applications (Network & Service)</li>
+    <li>Open Source Inventory Platforms</li>
+    <li>Service & Resource Orchestration</li>
+    <li>Inventory Data Modeling</li>
+    <li>Order Decomposition & Fulfillment</li>
+    <li>Production Support & Root Cause Analysis</li>
+    <li>Automation & Data Fixes</li>
+  </ul>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="section">
+  <h3>Experience Highlights</h3>
+
+  <div class="card">
+    <h4>Jio Platforms Limited</h4>
+    <span>Senior Engineer | 2022 – Present</span>
+    <p>
+      Working extensively on large-scale inventory applications and orchestration
+      workflows supporting nationwide telecom services. Responsible for production
+      stability, complex inventory issues, and improvements in orchestration reliability.
+    </p>
+  </div>
+
+  <div class="card">
+    <h4>Tata Consultancy Services</h4>
+    <span>Support Engineer (Offshore & Onsite – Saudi Arabia)</span>
+    <p>
+      Supported customer-facing inventory and orchestration systems.
+      Worked closely with clients to resolve critical inventory inconsistencies
+      and improve provisioning success rates.
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section contact">
+  <h3>Contact</h3>
+  <p>
+    For discussions related to inventory platforms, orchestration systems,
+    or engineering roles, feel free to reach out.
+  </p>
+
+  <form action="https://formsubmit.co/eswararao.raparthi@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <footer>
