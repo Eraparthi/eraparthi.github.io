@@ -6,9 +6,15 @@ function toggleTheme() {
   );
 }
 
-window.onload = () => {
-  const overlay = document.getElementById("videoOverlay");
+function enableSound() {
   const video = document.getElementById("introVideo");
+  video.muted = false;
+  document.getElementById("soundBtn").style.display = "none";
+}
+
+window.onload = () => {
+  const video = document.getElementById("introVideo");
+  const overlay = document.getElementById("videoOverlay");
 
   video.play();
 
