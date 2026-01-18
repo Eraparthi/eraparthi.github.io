@@ -1,4 +1,4 @@
-/* ================= THEME ================= */
+/* THEME */
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   document.documentElement.setAttribute("data-theme", savedTheme);
@@ -11,7 +11,7 @@ function toggleTheme() {
   localStorage.setItem("theme", next);
 }
 
-/* ================= VIDEO MODAL ================= */
+/* VIDEO MODAL */
 const modal = document.getElementById("introModal");
 const video = document.getElementById("introVideo");
 
@@ -27,21 +27,17 @@ function closeIntro() {
   video.pause();
 }
 
-window.addEventListener("load", () => {
+window.onload = () => {
   if (!sessionStorage.getItem("introShown")) {
     openIntro();
   }
-});
+};
 
-/* ================= SCROLL REVEAL ================= */
+/* SCROLL REVEAL */
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add("show");
   });
 }, { threshold: 0.15 });
 
-document.querySelectorAll(".reveal").forEach(el => {
-  observer.observe(el);
-});
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
