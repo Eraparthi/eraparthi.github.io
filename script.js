@@ -1,20 +1,14 @@
-const modal = document.getElementById("introModal");
-const video = document.getElementById("introVideo");
-
-window.onload = () => {
-  modal.style.display = "flex";
-};
-
-video.onended = closeIntro;
-
-function closeIntro() {
+function closeVideo() {
+  const overlay = document.getElementById("videoOverlay");
+  const video = document.getElementById("introVideo");
   video.pause();
-  modal.style.display = "none";
+  overlay.style.display = "none";
 }
+
+document.getElementById("introVideo").addEventListener("ended", closeVideo);
 
 function toggleTheme() {
   const html = document.documentElement;
-  const next =
-    html.getAttribute("data-theme") === "dark" ? "light" : "dark";
-  html.setAttribute("data-theme", next);
+  const current = html.getAttribute("data-theme");
+  html.setAttribute("data-theme", current === "dark" ? "light" : "dark");
 }
