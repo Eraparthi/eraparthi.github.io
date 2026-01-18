@@ -2,17 +2,18 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>Eswara Raparthi | Senior OSS L3 Operations & Inventory SME</title>
+  <title>Eswara Rao Raparthi | Senior OSS & Inventory SME</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= INTRO VIDEO MODAL ================= -->
-<div id="introModal" class="modal">
-  <div class="modal-box">
-    <video id="introVideo" muted playsinline autoplay>
+<!-- ================= VIDEO MODAL ================= -->
+<div id="videoOverlay" class="overlay">
+  <div class="video-modal">
+    <button class="close-btn" onclick="closeVideo()">Skip ✕</button>
+    <video id="introVideo" muted autoplay playsinline>
       <source src="intro.MOV" type="video/quicktime">
     </video>
   </div>
@@ -23,21 +24,29 @@
   <div class="logo">ER</div>
 
   <div class="header-actions">
-    <a href="Eswara Raparthi Latest Resume.docx" class="btn">Resume</a>
-    <a href="#contact" class="btn outline">Contact</a>
-    <a href="https://www.linkedin.com/in/eraparthi" target="_blank" class="icon">in</a>
-    <button class="icon" onclick="toggleTheme()">🌓</button>
+    <a href="Eswara Raparthi Latest Resume.docx" class="btn primary">Resume</a>
+    <a href="#contact" class="btn secondary">Contact</a>
+
+    <a href="https://www.linkedin.com/in/eraparthi" target="_blank" class="icon-btn" title="LinkedIn">
+      <svg viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.1c.67-1.3 2.3-2.7 4.7-2.7 5 0 5.9 3.3 5.9 7.6V24h-5V15.5c0-2-.04-4.5-2.8-4.5-2.8 0-3.2 2.1-3.2 4.3V24h-5V8z"/>
+      </svg>
+    </a>
+
+    <button class="icon-btn" onclick="toggleTheme()" title="Toggle theme">🌓</button>
   </div>
 </header>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-  <img src="profile.jpg" class="profile-pic" alt="Eswara Raparthi">
+  <div class="profile-wrap">
+    <img src="profile.jpg" alt="Eswara Rao Raparthi">
+  </div>
+
   <h1>Senior OSS L3 Operations & Inventory SME</h1>
-  <p>
-    12+ years of experience across OSS inventory platforms, orchestration,
-    migrations, reconciliation, and automation—ensuring production stability,
-    delivery assurance, and revenue protection.
+  <p class="hero-sub">
+    12+ years of experience driving OSS stability, inventory accuracy,
+    large-scale migrations, reconciliation, and automation across telecom platforms.
   </p>
 </section>
 
@@ -47,92 +56,66 @@
 
   <div class="card">
     <h3>Jio Platforms Limited</h3>
-    <p class="role">L3 OSS Support Engineer | Nov 2022 – Present</p>
+    <p class="role">Senior OSS L3 Engineer | 2022 – Present</p>
     <ul>
-      <li>L3 ownership of Ericsson Granite, Order Care, and Open-Source Inventory platforms</li>
-      <li>Key contributor in large-scale migration from Ericsson inventory to open-source inventory systems</li>
-      <li>Designed inventory reconciliation approaches to eliminate data mismatches</li>
-      <li>Performed deep RCA and implemented permanent fixes for recurring production issues</li>
-      <li>Developed PL/SQL automation scripts for data cleanup, correction, and operational efficiency</li>
-      <li>Built unified dashboards for inventory health, orders, alarms, and operational visibility</li>
-      <li>Ensured deployment readiness through validation in lower environments</li>
+      <li>Owns end-to-end production stability for inventory and orchestration platforms</li>
+      <li>Led critical inventory migration from Ericsson Granite to open-source inventory</li>
+      <li>Designed reconciliation strategies to eliminate data drift and service impact</li>
+      <li>Built unified dashboards combining alarms, inventory, and order health</li>
+      <li>Developed PL/SQL automation reducing manual intervention and repeat incidents</li>
     </ul>
   </div>
 
   <div class="card">
     <h3>Tata Consultancy Services</h3>
-    <p class="role">L2 OSS Support Engineer | Aug 2019 – Nov 2022</p>
+    <p class="role">OSS Support Engineer (Offshore & Onsite – Saudi Arabia)</p>
     <ul>
-      <li>Supported OSS fulfillment and inventory systems across offshore and onsite (Saudi Arabia) engagements</li>
-      <li>Handled complex order failures and data issues in Granite and ANM systems</li>
-      <li>Worked closely with product teams to track and close defects</li>
-      <li>Created SQL reports and supported production readiness post deployments</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Reliance Jio Infocomm Limited</h3>
-    <p class="role">L1 / L2 OSS Support Engineer | Dec 2015 – Jun 2019</p>
-    <ul>
-      <li>Supported OSS domains including Microwave, POI, Small Cells, and OSP/ISP</li>
-      <li>Investigated incidents using logs, Java/XML analysis, and database validation</li>
-      <li>Managed IP address allocation and OSS data accuracy</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Early Career – GIS & Network Inventory</h3>
-    <ul>
-      <li>Worked on GIS mapping, network inventory creation, and telecom rollout support</li>
-      <li>Built strong fundamentals in data accuracy, spatial tools, and telecom workflows</li>
+      <li>Supported large-scale OSS fulfillment and inventory systems</li>
+      <li>Handled customer-critical production incidents and complex data issues</li>
+      <li>Worked closely with client teams to stabilize operations and delivery</li>
     </ul>
   </div>
 </section>
 
-<!-- ================= OPERATIONAL IMPACT ================= -->
-<section class="section">
-  <h2>Operational Impact & Metrics</h2>
-  <div class="impact-grid">
-    <div class="impact">Prevented revenue leakage by identifying recurring inventory and order failure patterns</div>
-    <div class="impact">Ensured customer service delivery timelines through faster RCA and fixes</div>
-    <div class="impact">Reduced repeat incidents via automation and permanent fixes</div>
-    <div class="impact">Improved inventory data reliability across multiple OSS systems</div>
-  </div>
-</section>
+<!-- ================= CASE STUDIES ================= -->
+<section class="section glass">
+  <h2>Selected Case Studies</h2>
 
-<!-- ================= CORE EXPERTISE ================= -->
-<section class="section">
-  <h2>Core Expertise</h2>
-  <div class="expertise">
-    <span>OSS L3 Operations</span>
-    <span>Inventory Platforms</span>
-    <span>Ericsson Granite</span>
-    <span>Open Source Inventory</span>
-    <span>Inventory Reconciliation</span>
-    <span>OSS Orchestration</span>
-    <span>PL/SQL</span>
-    <span>Neo4j</span>
-    <span>Automation & RCA</span>
-  </div>
-</section>
+  <div class="case-grid">
+    <div class="case">
+      <h4>Unified Operations Dashboard</h4>
+      <p>
+        Designed a single operational view combining inventory, orders, alarms,
+        and reconciliation status, improving visibility and proactive issue detection.
+      </p>
+    </div>
 
-<!-- ================= EDUCATION ================= -->
-<section class="section">
-  <h2>Education</h2>
-  <div class="card">
-    <strong>B.Tech – Electronics & Communication Engineering</strong><br>
-    Sri Sai Aditya Institute of Science and Technology (JNTU-K)<br>
-    2007 – 2011 | 63.2%
+    <div class="case">
+      <h4>Inventory Migration & Reconciliation</h4>
+      <p>
+        Played a key role in migrating from proprietary inventory to open-source platforms,
+        ensuring data accuracy, service continuity, and reduced revenue risk.
+      </p>
+    </div>
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section contact">
   <h2>Contact</h2>
-  <p>
-    Open to discussions around OSS inventory platforms,
-    transformations, and senior engineering opportunities.
-  </p>
+
+  <form class="contact-form">
+    <label>Name</label>
+    <input type="text" placeholder="Your name">
+
+    <label>Email</label>
+    <input type="email" placeholder="Your email">
+
+    <label>Message</label>
+    <textarea placeholder="Your message"></textarea>
+
+    <button type="submit" class="btn primary">Send Message</button>
+  </form>
 </section>
 
 <footer>© 2026 Eswara Rao Raparthi</footer>
