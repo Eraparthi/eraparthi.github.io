@@ -9,6 +9,6 @@ document.getElementById("introVideo").addEventListener("ended", closeVideo);
 
 function toggleTheme() {
   const html = document.documentElement;
-  const theme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
-  html.setAttribute("data-theme", theme);
-} 
+  const current = html.getAttribute("data-theme");
+  html.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+}
