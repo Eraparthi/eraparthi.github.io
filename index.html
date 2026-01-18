@@ -4,46 +4,38 @@
   <meta charset="UTF-8">
   <title>Eswara Rao Raparthi | Senior L3 OSS Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-        content="Senior L3 OSS Engineer & OSS SME focused on OSS stability, RCA, automation, and unified operational dashboards.">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= INTRO VIDEO MODAL ================= -->
-<div id="introModal" class="modal">
-  <div class="modal-content cinematic">
-    <div class="video-frame">
-      <video id="introVideo" src="intro.MOV"></video>
+<!-- ================= INTRO MODAL ================= -->
+<div id="introModal" class="intro-modal">
+  <div class="intro-card">
+    <div class="intro-frame">
+      <video id="introVideo" muted playsinline>
+        <source src="intro.MOV" type="video/mp4">
+      </video>
     </div>
-    <div class="video-caption">
-      <strong>Eswara Rao Raparthi</strong><br>
-      Senior L3 OSS Engineer · OSS SME · Automation
+
+    <div class="intro-overlay">
+      <h2>Eswara Rao Raparthi</h2>
+      <p>Senior L3 OSS Engineer · OSS SME · Automation</p>
     </div>
+
+    <button class="skip-btn" onclick="closeIntro()">Skip Intro</button>
   </div>
 </div>
 
-<!-- ================= TOP HEADER ================= -->
+<!-- ================= HEADER ================= -->
 <header class="top-header">
   <span class="site-name">Eswara Raparthi</span>
-
-  <div class="header-actions">
-    <a href="Eswara Raparthi Latest Resume.docx" download class="resume-link">Resume</a>
-
-    <a href="https://www.linkedin.com/" target="_blank" class="header-icon">🔗</a>
-    <a href="https://github.com/eraparthi" target="_blank" class="header-icon">💻</a>
-
-    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-  </div>
 </header>
 
 <!-- ================= HERO ================= -->
 <section class="hero hidden">
   <div class="hero-card">
-
     <div class="profile-wrapper">
-      <img src="profile.JPG" class="profile-pic" alt="Eswara Rao Raparthi">
+      <img src="profile.JPG" class="profile-pic">
       <span class="profile-ring"></span>
     </div>
 
@@ -51,105 +43,11 @@
     <h2>Senior L3 OSS Engineer | OSS SME</h2>
 
     <p>
-      Production Ownership · Deep RCA · Permanent Fixes · Automation ·
-      Unified OSS Dashboards
+      Production Stability · Deep RCA · Automation · Unified OSS Dashboards
     </p>
 
-    <div class="hero-actions">
-      <a href="#contact" class="btn secondary">Contact</a>
-    </div>
-
+    <a href="#contact" class="btn secondary">Contact</a>
   </div>
-</section>
-
-<!-- ================= SUMMARY ================= -->
-<section class="section glass">
-  <h3>Professional Summary</h3>
-  <p>
-    Senior L3 OSS Engineer with 12+ years of experience across Telecom OSS platforms.
-    Acts as an OSS Subject Matter Expert responsible for production stability,
-    complex incident resolution, and permanent fixes. Strong focus on automation,
-    observability, and operational excellence.
-  </p>
-</section>
-
-<!-- ================= SKILLS ================= -->
-<section class="section">
-  <h3>Core Expertise</h3>
-  <div class="chips">
-    <span>L3 OSS Operations</span>
-    <span>OSS SME</span>
-    <span>Ericsson Granite</span>
-    <span>Order Care</span>
-    <span>Inventory & Fulfillment</span>
-    <span>Deep RCA</span>
-    <span>Automation (PL/SQL)</span>
-    <span>Unified Dashboards</span>
-  </div>
-</section>
-
-<!-- ================= EXPERIENCE ================= -->
-<section class="section glass">
-  <h3>Professional Experience</h3>
-
-  <div class="card">
-    <h4>Jio Platforms Limited</h4>
-    <span>Senior L3 OSS Engineer / OSS SME | 2022 – Present</span>
-    <p>
-      Own production stability for critical OSS platforms.
-      Final escalation point for complex incidents.
-      Driving automation and unified dashboards to improve predictability
-      and reduce repeat issues.
-    </p>
-  </div>
-
-  <div class="card">
-    <h4>Tata Consultancy Services</h4>
-    <span>L2 OSS Support – Offshore & Onsite (Saudi Arabia) | 2019 – 2022</span>
-    <p>
-      Supported OSS fulfillment systems in customer-facing onsite role.
-      Delivered automation and structured analysis leading to faster
-      incident resolution and client appreciation.
-    </p>
-  </div>
-
-  <div class="card">
-    <h4>Reliance Jio Infocomm Limited</h4>
-    <span>OSS Support Engineer | 2015 – 2019</span>
-    <p>
-      Supported multiple OSS domains including Microwave, POI,
-      Small Cells, and inventory platforms.
-    </p>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section glass contact-advanced">
-  <h3>Let’s Connect</h3>
-  <p class="contact-sub">
-    Interested in OSS stability, automation, or leadership opportunities?
-    Reach out — I usually respond within 24 hours.
-  </p>
-
-  <form class="contact-form advanced"
-        action="https://formsubmit.co/eswararao.raparthi@gmail.com"
-        method="POST">
-
-    <input type="hidden" name="_captcha" value="false">
-
-    <div class="form-grid">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-    </div>
-
-    <textarea name="message"
-              placeholder="Briefly describe your requirement or opportunity"
-              required></textarea>
-
-    <button type="submit" class="btn primary big">
-      Send Message →
-    </button>
-  </form>
 </section>
 
 <footer>
