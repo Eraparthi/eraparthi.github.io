@@ -1,9 +1,12 @@
-const popup = document.getElementById("videoPopup");
+const modal = document.getElementById("introModal");
 const video = document.getElementById("introVideo");
 
-function closePopup() {
-  popup.style.display = "none";
+function closeIntro() {
+  modal.style.display = "none";
   video.pause();
 }
 
-video.addEventListener("ended", closePopup);
+video.addEventListener("ended", closeIntro);
+
+// safety fallback
+setTimeout(closeIntro, 15000);
