@@ -2,85 +2,112 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>Eswara Rao Raparthi | OSS & Inventory SME</title>
+  <title>Eswara Rao Raparthi | Senior OSS & Inventory SME</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-        content="Senior OSS L3 Operations & Inventory SME specializing in OSS stability, inventory platforms, migrations, and automation.">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- ================= INTRO VIDEO MODAL ================= -->
+<!-- ================= VIDEO INTRO POPUP ================= -->
 <div id="introModal" class="modal">
   <div class="modal-content">
-    <button class="modal-close" onclick="closeIntro()">Skip</button>
-    <div class="video-wrapper">
-      <video id="introVideo" controls playsinline>
-        <source src="intro.MOV" type="video/quicktime">
-      </video>
-    </div>
-    <p class="modal-caption">
-      A short introduction before you explore my professional profile
+    <button class="close-btn" onclick="closeIntro()">✕</button>
+    <video id="introVideo" controls preload="metadata">
+      <source src="intro.MOV" type="video/quicktime">
+    </video>
+    <p class="intro-caption">
+      A brief professional introduction before exploring my experience
     </p>
   </div>
 </div>
 
 <!-- ================= HEADER ================= -->
 <header class="header">
-  <div class="header-actions">
-    <a href="https://www.linkedin.com" target="_blank" class="icon-btn">in</a>
+  <div class="header-left">
+    <div class="header-name">Eswara Rao Raparthi</div>
+    <div class="header-role">
+      Senior OSS L3 Operations & Inventory SME
+    </div>
+  </div>
 
-    <a href="Eswara Raparthi Latest Resume.docx" class="btn outline">
-      Resume
-    </a>
-
-    <a href="#contact" class="btn outline">
-      Contact
-    </a>
-
+  <div class="header-right">
+    <a class="header-btn" href="Eswara Raparthi Latest Resume.docx">Resume</a>
+    <a class="header-btn outline" href="#contact">Contact</a>
+    <a class="linkedin" href="https://www.linkedin.com" target="_blank">in</a>
     <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
   </div>
 </header>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-  <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
-
-  <h1>Eswara Rao Raparthi</h1>
-  <h2>Senior OSS L3 Operations & Inventory SME</h2>
-
+  <img src="profile.jpg" class="profile-pic" alt="Profile">
   <p class="hero-text">
-    Specializing in OSS stability, inventory platforms, large-scale migrations,
-    reconciliation, and automation to ensure reliable service delivery.
+    Senior OSS professional specializing in telecom inventory platforms,
+    L3 production operations, reconciliation, migration, and automation —
+    enabling service stability and protecting business revenue.
   </p>
 </section>
 
-<!-- ================= CASE STUDY ================= -->
+<!-- ================= EXPERIENCE ================= -->
 <section class="section">
-  <h3>Key Case Study</h3>
-  <div class="card">
+  <h2>Professional Experience</h2>
+
+  <div class="experience-card">
+    <h3>Jio Platforms Limited</h3>
+    <p class="role">Senior OSS / Inventory Engineer</p>
     <ul>
-      <li>Built a unified operational dashboard across inventory, orders, and alarms</li>
-      <li>Played a key role in migrating inventory from Ericsson Granite to open-source platforms</li>
-      <li>Implemented reconciliation and automation to improve data accuracy and prevent revenue leakage</li>
+      <li>Handled complex L3 production incidents across OSS inventory and orchestration platforms</li>
+      <li>Played a key role in migrating inventory from Ericsson Granite to open-source inventory solutions</li>
+      <li>Designed and supported reconciliation mechanisms ensuring inventory accuracy across domains</li>
+      <li>Built unified operational dashboards to track alarms, inventory health, and order failures</li>
+      <li>Implemented automation to reduce MTTR and eliminate repeat operational issues</li>
+    </ul>
+  </div>
+
+  <div class="experience-card">
+    <h3>Tata Consultancy Services (TCS)</h3>
+    <p class="role">OSS Engineer</p>
+    <ul>
+      <li>Supported large-scale telecom OSS environments across offshore and onsite engagements</li>
+      <li>Worked closely with customer teams to stabilize inventory and fulfillment systems</li>
+      <li>Contributed to automation and process improvements improving operational efficiency</li>
+    </ul>
+  </div>
+
+  <div class="experience-card">
+    <h3>Career Foundation</h3>
+    <ul>
+      <li>Started career building strong fundamentals in telecom OSS, databases, and production support</li>
+      <li>Developed hands-on expertise in issue analysis, SQL, and operational troubleshooting</li>
     </ul>
   </div>
 </section>
 
 <!-- ================= OPERATIONAL IMPACT ================= -->
 <section class="section">
-  <h3>Operational Impact</h3>
+  <h2>Operational Impact</h2>
+
   <div class="impact-grid">
-    <div class="impact-card">Prevented revenue leakage through early issue detection</div>
-    <div class="impact-card">Ensured on-time service delivery within committed timelines</div>
-    <div class="impact-card">Reduced manual effort using automation and repeatable fixes</div>
-    <div class="impact-card">Improved inventory reliability and operational confidence</div>
+    <div class="impact-card">
+      Prevented revenue loss by identifying recurring inventory and order failure patterns
+    </div>
+    <div class="impact-card">
+      Ensured committed service delivery timelines for live customer activations
+    </div>
+    <div class="impact-card">
+      Reduced operational load through automation and permanent fixes
+    </div>
+    <div class="impact-card">
+      Improved trust in inventory data across OSS platforms
+    </div>
   </div>
 </section>
 
 <!-- ================= CORE EXPERTISE ================= -->
 <section class="section">
-  <h3>Core Expertise</h3>
+  <h2>Core Expertise</h2>
+
   <div class="expertise-grid">
     <span>OSS L3 Operations</span>
     <span>Inventory Platforms</span>
@@ -94,42 +121,20 @@
   </div>
 </section>
 
-<!-- ================= EXPERIENCE ================= -->
-<section class="section">
-  <h3>Professional Experience</h3>
-
-  <div class="card">
-    <strong>Jio Platforms Limited</strong><br>
-    Senior OSS & Inventory Engineer responsible for platform stability,
-    complex issue resolution, migrations, and automation initiatives.
-  </div>
-
-  <div class="card">
-    <strong>Tata Consultancy Services</strong><br>
-    OSS inventory and fulfillment support across offshore and onsite engagements,
-    contributing to stable operations and customer confidence.
-  </div>
-
-  <div class="card">
-    <strong>Early Career</strong><br>
-    Built strong fundamentals in telecom systems, data modeling, and operations support.
-  </div>
-</section>
-
 <!-- ================= EDUCATION ================= -->
 <section class="section">
-  <h3>Education</h3>
-  <div class="card">
-    Bachelor’s Degree in Engineering
+  <h2>Education</h2>
+  <div class="education-card">
+    Bachelor of Engineering
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section contact">
-  <h3>Contact</h3>
-  <p class="contact-text">
-    Open to discussions on OSS platforms, inventory transformations,
-    and senior engineering opportunities.
+  <h2>Contact</h2>
+  <p>
+    Open to conversations around OSS inventory platforms,
+    operational excellence, and senior engineering roles.
   </p>
 </section>
 
