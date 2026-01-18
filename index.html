@@ -9,11 +9,11 @@
 
 <body>
 
-<!-- ================= INTRO VIDEO MODAL ================= -->
-<div id="introModal" class="modal">
-  <div class="modal-box futuristic-border">
-    <button class="close-btn" onclick="closeIntro()">✕</button>
-    <video id="introVideo" controls playsinline>
+<!-- ================= VIDEO POPUP ================= -->
+<div id="videoOverlay" class="video-overlay">
+  <div class="video-container">
+    <button class="video-close" onclick="closeVideo()">Skip ✕</button>
+    <video id="introVideo" autoplay playsinline>
       <source src="intro.MOV" type="video/quicktime">
     </video>
   </div>
@@ -21,12 +21,19 @@
 
 <!-- ================= HEADER ================= -->
 <header class="header">
-  <div class="logo">ER</div>
+  <div class="logo">Eswara R</div>
 
   <div class="header-actions">
     <a href="Eswara Raparthi Latest Resume.docx" class="btn">Resume</a>
     <a href="#contact" class="btn outline">Contact</a>
-    <a href="https://www.linkedin.com" target="_blank" class="icon">in</a>
+
+    <!-- LinkedIn Icon -->
+    <a href="https://www.linkedin.com" target="_blank" class="icon" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.75 1.86-2.75 3.78V24h-4z"/>
+      </svg>
+    </a>
+
     <button class="icon" onclick="toggleTheme()">🌓</button>
   </div>
 </header>
@@ -38,10 +45,10 @@
   <h1>Senior OSS L3 Operations & Inventory SME</h1>
 
   <ul class="summary-points">
-    <li>12+ years of experience across Telecom OSS, Inventory & Fulfillment platforms</li>
-    <li>Expert in OSS inventory systems, orchestration, reconciliation & migrations</li>
-    <li>Strong L3 ownership with deep RCA and permanent fix mindset</li>
-    <li>Known for bridging gaps between operations, design, and business needs</li>
+    <li>12+ years across OSS operations, inventory platforms, and fulfillment systems</li>
+    <li>L3 ownership with deep RCA and permanent fix mindset</li>
+    <li>Expert in inventory reconciliation, migrations, and orchestration</li>
+    <li>Strong contributor to design, development, and business solutioning</li>
   </ul>
 </section>
 
@@ -49,57 +56,35 @@
 <section class="section">
   <h2>Professional Experience</h2>
 
-  <!-- CURRENT ROLE -->
   <div class="card">
     <h3>Jio Platforms Limited</h3>
     <span>Senior OSS L3 Operations Engineer / Inventory SME | Nov 2022 – Present</span>
-
     <ul>
-      <li>L3 owner for OSS inventory and orchestration platforms supporting large-scale telecom services</li>
-      <li>Actively provide **design and development inputs** to product teams based on production realities</li>
-      <li>Proposed **inventory-first solution approaches** when planned features were delayed or unavailable</li>
-      <li>Played a key role in **migration from Ericsson Granite to open-source inventory platforms**</li>
-      <li>Designed reconciliation strategies to identify and eliminate inventory mismatches</li>
-      <li>Built unified operational dashboards covering inventory health, alarms, and order flow</li>
-      <li>Identified recurring issue patterns early, preventing potential revenue loss</li>
-      <li>Developed automation (PL/SQL) to reduce manual effort and stabilize operations</li>
+      <li>L3 owner for OSS inventory and orchestration platforms</li>
+      <li>Provided design and development inputs based on production gaps</li>
+      <li>Proposed inventory-first solutions when planned features were delayed</li>
+      <li>Key role in migration from Ericsson Granite to open-source inventory</li>
+      <li>Built reconciliation frameworks to prevent inventory drift</li>
+      <li>Created unified dashboards for inventory, alarms, and order flow</li>
     </ul>
   </div>
 
-  <!-- TCS -->
   <div class="card">
     <h3>Tata Consultancy Services</h3>
-    <span>L2 OSS Support Engineer (Offshore & Onsite – Saudi Arabia) | Aug 2019 – Nov 2022</span>
-
+    <span>L2 OSS Support Engineer (Offshore & Onsite – Saudi Arabia)</span>
     <ul>
-      <li>Supported OSS fulfillment and inventory platforms in high-availability environments</li>
-      <li>Handled complex order failures, data issues, and production incidents</li>
-      <li>Worked closely with customer stakeholders during onsite engagement</li>
-      <li>Contributed to operational improvements and stability through structured analysis</li>
-      <li>Assisted in deployments, validations, and production readiness activities</li>
+      <li>Supported OSS inventory and fulfillment platforms</li>
+      <li>Handled complex production incidents and customer escalations</li>
+      <li>Contributed to operational stability and process improvements</li>
     </ul>
   </div>
 
-  <!-- RELIANCE JIO -->
   <div class="card">
     <h3>Reliance Jio Infocomm Limited</h3>
-    <span>OSS Support Engineer | Dec 2015 – Jun 2019</span>
-
+    <span>OSS Support Engineer</span>
     <ul>
-      <li>Supported multiple OSS domains including Microwave, POI, Small Cells, and OSP/ISP inventory</li>
-      <li>Worked on incident investigation using logs, workflows, and database validation</li>
-      <li>Ensured inventory accuracy to support service delivery and network operations</li>
-    </ul>
-  </div>
-
-  <!-- EARLY CAREER -->
-  <div class="card">
-    <h3>Early Career – GIS & Telecom Systems</h3>
-    <span>Engineer | 2012 – 2015</span>
-
-    <ul>
-      <li>Worked on GIS mapping and network inventory creation</li>
-      <li>Built strong fundamentals in telecom data models and system integrations</li>
+      <li>Supported Microwave, POI, Small Cells, and OSP/ISP inventory</li>
+      <li>Ensured OSS data accuracy for service delivery</li>
     </ul>
   </div>
 </section>
@@ -125,10 +110,10 @@
 <section class="section">
   <h2>Operational Impact</h2>
   <div class="impact-grid">
-    <div class="impact">Prevented potential revenue loss through early issue pattern detection</div>
-    <div class="impact">Ensured on-time delivery of live services by stabilizing OSS workflows</div>
-    <div class="impact">Reduced repeat incidents via permanent fixes and automation</div>
-    <div class="impact">Improved trust in inventory data across dependent systems</div>
+    <div class="impact">Prevented revenue loss through early issue pattern detection</div>
+    <div class="impact">Ensured on-time delivery of live services</div>
+    <div class="impact">Reduced repeat incidents via automation</div>
+    <div class="impact">Improved inventory data trust</div>
   </div>
 </section>
 
@@ -145,22 +130,22 @@
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section contact">
   <h2>Contact</h2>
-  <p>
-    Open to discussions around OSS inventory platforms, transformations,
-    and senior engineering opportunities.
-  </p>
 
   <form class="contact-form">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" required></textarea>
+    <label>Name</label>
+    <input type="text" required>
+
+    <label>Email</label>
+    <input type="email" required>
+
+    <label>Message</label>
+    <textarea required></textarea>
+
     <button class="btn">Send Message</button>
   </form>
 </section>
 
-<footer>
-  © 2026 Eswara Raparthi
-</footer>
+<footer>© 2026 Eswara Raparthi</footer>
 
 <script src="script.js"></script>
 </body>
