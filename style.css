@@ -1,28 +1,50 @@
+:root {
+  --bg-main: linear-gradient(135deg,#020617,#0f172a);
+  --glass: rgba(255,255,255,.06);
+  --text: #e5e7eb;
+  --accent: #38bdf8;
+}
+
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
+  background: var(--bg-main);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui;
 }
 
-/* HEADER */
-.header {
-  padding: 14px 20px;
-  background: #020617;
+/* ================= HEADER ================= */
+.top-header {
+  position: sticky;
+  top: 0;
+  background: rgba(10,15,30,.75);
+  backdrop-filter: blur(10px);
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
 }
 
-/* HERO */
+.resume-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 14px;
+}
+
+/* ================= HERO ================= */
 .hero {
   padding: 60px 20px;
-  text-align: center;
 }
 
 .hero-card {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
-  background: #020617;
+  background: var(--glass);
+  border-radius: 22px;
   padding: 40px;
-  border-radius: 14px;
+  text-align: center;
 }
 
 .profile-pic {
@@ -32,69 +54,30 @@ body {
   object-fit: cover;
 }
 
-/* SECTIONS */
-.section {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-.card {
-  background: #020617;
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 16px;
-}
-
-.skills li {
-  margin-bottom: 8px;
-}
-
-/* CONTACT */
-.contact form {
-  max-width: 500px;
-}
-
-.contact input,
-.contact textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-}
-
-/* BUTTON */
-.btn,
-button {
-  padding: 12px 20px;
-  background: #38bdf8;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* POPUP */
-.popup-overlay {
+/* ================= POPUP ================= */
+.modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.75);
+  background: rgba(2,6,23,.85);
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 2000;
+  justify-content: center;
+  z-index: 3000;
 }
 
-.popup-box {
-  background: #020617;
-  padding: 20px;
-  border-radius: 14px;
+.modal-box {
   width: 420px;
   max-width: 90%;
+  background: #020617;
+  padding: 16px;
+  border-radius: 18px;
   position: relative;
 }
 
-.popup-box video {
+.modal-box video {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 14px;
+  object-fit: cover;
 }
 
 .close-btn {
@@ -102,8 +85,39 @@ button {
   top: 10px;
   right: 10px;
   background: transparent;
-  color: #fff;
-  border: none;
-  font-size: 18px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 12px;
+  padding: 4px 10px;
   cursor: pointer;
+}
+
+.modal-caption {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/* ================= CONTACT ================= */
+.contact-advanced {
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn.big {
+  padding: 14px 26px;
+  margin-top: 12px;
 }
