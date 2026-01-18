@@ -2,140 +2,155 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>Eswara Rao Raparthi | Senior OSS L3 Operations & Inventory SME</title>
+  <title>Eswara Raparthi | Senior OSS L3 Operations & Inventory SME</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ========== INTRO VIDEO POPUP ========== -->
-<div id="introModal" class="modal">
-  <div class="modal-content">
-    <button class="skip-btn" onclick="closeIntro()">Skip</button>
-    <video id="introVideo" controls playsinline>
+<!-- ================= VIDEO INTRO POPUP ================= -->
+<div id="videoOverlay" class="video-overlay">
+  <div class="video-frame">
+
+    <!-- Skip moved away from controls -->
+    <button class="video-skip" onclick="closeVideo()">Skip Intro</button>
+
+    <video id="introVideo" autoplay muted playsinline controls>
       <source src="intro.MOV" type="video/quicktime">
     </video>
   </div>
 </div>
 
-<!-- ========== HEADER ========== -->
-<header class="top-header">
-  <div class="site-name">Eswara Raparthi</div>
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="logo">Eswara R</div>
 
   <div class="header-actions">
     <a href="Eswara Raparthi Latest Resume.docx" class="btn">Resume</a>
     <a href="#contact" class="btn outline">Contact</a>
 
-    <a href="https://www.linkedin.com" target="_blank" class="header-icon">in</a>
+    <a href="https://www.linkedin.com" target="_blank" class="icon" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24">
+        <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.75 1.86-2.75 3.78V24h-4z"/>
+      </svg>
+    </a>
 
-    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+    <button class="icon" onclick="toggleTheme()">🌓</button>
   </div>
 </header>
 
-<!-- ========== HERO ========== -->
+<!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="hero-card">
-    <img src="profile.JPG" class="profile-pic" alt="Eswara Raparthi">
+  <img src="profile.JPG" class="profile-pic" alt="Eswara Raparthi">
 
-    <h1>Senior OSS L3 Operations & Inventory SME</h1>
+  <h1>Senior OSS L3 Operations & Inventory SME</h1>
+
+  <div class="summary-card">
     <p>
-      Production Ownership • Inventory Platforms • Deep RCA • Automation
+      Senior OSS and Inventory Subject Matter Expert with 12+ years of experience
+      delivering production stability across large-scale telecom platforms.
+    </p>
+    <p>
+      Specialized in inventory systems, orchestration, reconciliation, and migrations,
+      with strong L3 ownership and a permanent-fix mindset.
+    </p>
+    <p>
+      Known for bridging operations, design, and business needs by proposing
+      inventory-first solutions when roadmap features are unavailable.
     </p>
   </div>
 </section>
 
-<!-- ========== SUMMARY ========== -->
-<section class="section glass">
-  <p>
-    Senior OSS professional with 12+ years of experience across telecom OSS
-    inventory and fulfillment platforms. Strong expertise in production
-    stability, inventory reconciliation, migrations, and permanent fix design.
-  </p>
-</section>
-
-<!-- ========== EXPERIENCE ========== -->
-<section class="section glass">
-  <h3>Professional Experience</h3>
-
-  <div class="card">
-    <h4>Jio Platforms Limited</h4>
-    <span>Senior OSS L3 Operations Engineer / Inventory SME | 2022 – Present</span>
-    <p>
-      L3 owner for OSS inventory and orchestration platforms. Actively involved
-      in inventory migrations, reconciliation strategies, automation, and
-      unified dashboards to improve operational visibility and stability.
-    </p>
-  </div>
-
-  <div class="card">
-    <h4>Tata Consultancy Services</h4>
-    <span>L2 OSS Support – Offshore & Onsite (Saudi Arabia) | 2019 – 2022</span>
-    <p>
-      Supported OSS fulfillment and inventory platforms. Worked closely with
-      customer teams during onsite engagement and contributed to improved
-      operational confidence.
-    </p>
-  </div>
-
-  <div class="card">
-    <h4>Reliance Jio Infocomm Limited</h4>
-    <span>OSS Support Engineer | 2015 – 2019</span>
-    <p>
-      Supported multiple OSS domains including Microwave, POI, Small Cells,
-      and OSP/ISP inventory.
-    </p>
-  </div>
-
-  <div class="card">
-    <h4>Early Career – GIS & Telecom Systems</h4>
-    <span>Engineer | 2012 – 2015</span>
-    <p>
-      Worked on GIS mapping and telecom inventory systems.
-    </p>
-  </div>
-</section>
-
-<!-- ========== CORE EXPERTISE ========== -->
+<!-- ================= EXPERIENCE ================= -->
 <section class="section">
-  <h3>Core Expertise</h3>
-  <div class="chips">
+  <h2>Professional Experience</h2>
+
+  <div class="card">
+    <h3>Jio Platforms Limited</h3>
+    <span>Senior OSS L3 Operations Engineer / Inventory SME | Nov 2022 – Present</span>
+    <ul>
+      <li>L3 ownership of OSS inventory and orchestration platforms</li>
+      <li>Provided design and development inputs based on production gaps</li>
+      <li>Defined inventory-first workaround solutions for business continuity</li>
+      <li>Major role in migration from Ericsson Granite to open-source inventory</li>
+      <li>Designed reconciliation logic to eliminate inventory mismatches</li>
+      <li>Built unified dashboards for inventory health and order flows</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Tata Consultancy Services</h3>
+    <span>L2 OSS Support Engineer (Offshore & Onsite – Saudi Arabia)</span>
+    <ul>
+      <li>Supported OSS inventory and fulfillment platforms</li>
+      <li>Handled complex production incidents and customer escalations</li>
+      <li>Improved stability through structured RCA</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Reliance Jio Infocomm Limited</h3>
+    <span>OSS Support Engineer</span>
+    <ul>
+      <li>Supported Microwave, POI, Small Cells, and OSP/ISP inventory</li>
+      <li>Ensured OSS data accuracy for service delivery</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CORE EXPERTISE ================= -->
+<section class="section">
+  <h2>Core Expertise</h2>
+  <div class="expertise">
     <span>OSS L3 Operations</span>
     <span>Inventory Platforms</span>
     <span>Ericsson Granite</span>
     <span>Open Source Inventory</span>
     <span>Inventory Reconciliation</span>
+    <span>OSS Orchestration</span>
     <span>PL/SQL</span>
     <span>Neo4j</span>
     <span>Automation</span>
+    <span>Deep RCA</span>
   </div>
 </section>
 
-<!-- ========== EDUCATION ========== -->
-<section class="section glass">
-  <h3>Education</h3>
-  <p>
-    Bachelor of Technology – Electronics & Communication Engineering<br>
+<!-- ================= EDUCATION ================= -->
+<section class="section">
+  <h2>Education</h2>
+  <div class="card">
+    <strong>Bachelor of Technology – Electronics & Communication Engineering</strong><br>
     Sri Sai Aditya Institute of Science and Technology (JNTU-K)<br>
     2007 – 2011
-  </p>
+  </div>
 </section>
 
-<!-- ========== CONTACT ========== -->
-<section id="contact" class="section glass">
-  <h3>Contact</h3>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section contact">
+  <h2>Contact</h2>
 
   <form class="contact-form">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" required></textarea>
-    <button class="btn primary">Send Message</button>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Message</label>
+      <textarea required></textarea>
+    </div>
+
+    <button class="btn">Send Message</button>
   </form>
 </section>
 
-<footer>
-  © 2026 Eswara Raparthi
-</footer>
+<footer>© 2026 Eswara Raparthi</footer>
 
 <script src="script.js"></script>
 </body>
