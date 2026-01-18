@@ -9,14 +9,13 @@
 
 <body>
 
-<!-- ================= VIDEO INTRO POPUP ================= -->
+<!-- ================= VIDEO INTRO ================= -->
 <div id="videoOverlay" class="video-overlay">
   <div class="video-frame">
     <button class="video-close" onclick="closeVideo()">Skip ✕</button>
 
     <video id="introVideo" autoplay muted playsinline controls>
       <source src="intro.MOV" type="video/quicktime">
-      Your browser does not support the video tag.
     </video>
   </div>
 </div>
@@ -29,7 +28,6 @@
     <a href="Eswara Raparthi Latest Resume.docx" class="btn">Resume</a>
     <a href="#contact" class="btn outline">Contact</a>
 
-    <!-- LinkedIn Icon -->
     <a href="https://www.linkedin.com" target="_blank" class="icon" aria-label="LinkedIn">
       <svg viewBox="0 0 24 24">
         <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.75 1.86-2.75 3.78V24h-4z"/>
@@ -46,12 +44,20 @@
 
   <h1>Senior OSS L3 Operations & Inventory SME</h1>
 
-  <ul class="summary-points">
-    <li>12+ years across OSS operations, inventory platforms, and fulfillment systems</li>
-    <li>L3 ownership with deep RCA and permanent fix mindset</li>
-    <li>Expert in inventory reconciliation, migrations, and orchestration</li>
-    <li>Strong contributor to design, development, and business solutioning</li>
-  </ul>
+  <div class="summary-card">
+    <p>
+      Senior OSS and Inventory Subject Matter Expert with 12+ years of experience
+      delivering production stability across large-scale telecom platforms.
+    </p>
+    <p>
+      Specialized in inventory systems, orchestration, reconciliation, and migrations,
+      with strong L3 ownership and a permanent-fix mindset.
+    </p>
+    <p>
+      Known for bridging gaps between operations, design, and business by proposing
+      practical inventory-first solutions when roadmap features are delayed.
+    </p>
+  </div>
 </section>
 
 <!-- ================= EXPERIENCE ================= -->
@@ -64,10 +70,10 @@
     <ul>
       <li>L3 ownership of OSS inventory and orchestration platforms</li>
       <li>Provided design and development inputs based on production gaps</li>
-      <li>Defined inventory-first workaround solutions when features were delayed</li>
-      <li>Major role in migration from Ericsson Granite to open-source inventory</li>
-      <li>Designed reconciliation logic to prevent inventory drift</li>
-      <li>Built unified dashboards for alarms, inventory health, and order flow</li>
+      <li>Defined inventory-first workaround solutions for business continuity</li>
+      <li>Key contributor to migration from Ericsson Granite to open-source inventory</li>
+      <li>Designed reconciliation logic to eliminate inventory mismatches</li>
+      <li>Built unified dashboards for inventory health, alarms, and order flows</li>
     </ul>
   </div>
 
@@ -76,8 +82,8 @@
     <span>L2 OSS Support Engineer (Offshore & Onsite – Saudi Arabia)</span>
     <ul>
       <li>Supported OSS inventory and fulfillment platforms</li>
-      <li>Handled complex customer escalations and production incidents</li>
-      <li>Improved stability through structured RCA and operational discipline</li>
+      <li>Handled complex production incidents and customer escalations</li>
+      <li>Improved operational stability through structured RCA</li>
     </ul>
   </div>
 
@@ -123,14 +129,20 @@
   <h2>Contact</h2>
 
   <form class="contact-form">
-    <label>Name</label>
-    <input type="text" required>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" required>
+    </div>
 
-    <label>Email</label>
-    <input type="email" required>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" required>
+    </div>
 
-    <label>Message</label>
-    <textarea required></textarea>
+    <div class="form-group">
+      <label>Message</label>
+      <textarea required></textarea>
+    </div>
 
     <button class="btn">Send Message</button>
   </form>
