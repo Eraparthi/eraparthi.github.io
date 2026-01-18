@@ -2,17 +2,21 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <title>Eswara Rao Raparthi | Senior OSS L3 & Inventory SME</title>
+  <title>Eswara Rao Raparthi | Senior OSS & Inventory SME</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- ================= INTRO VIDEO MODAL ================= -->
+<!-- ================= VIDEO POPUP ================= -->
 <div id="videoOverlay" class="overlay">
   <div class="video-modal">
     <button class="close-btn" onclick="closeVideo()">Skip ✕</button>
+
+    <button id="soundBtn" class="sound-btn" onclick="enableSound()">
+      🔊 Tap for Sound
+    </button>
+
     <video id="introVideo" muted autoplay playsinline>
       <source src="intro.MOV" type="video/quicktime">
     </video>
@@ -45,8 +49,8 @@
 
   <h1>Senior OSS L3 Operations & Inventory SME</h1>
   <p class="hero-sub">
-    12+ years of experience owning OSS production stability, inventory platforms,
-    large-scale migrations, reconciliation, and automation across telecom ecosystems.
+    12+ years of experience in OSS production stability, inventory platforms,
+    large-scale migrations, reconciliation, and automation.
   </p>
 </section>
 
@@ -59,38 +63,19 @@
     <p class="role">Senior OSS L3 Engineer | 2022 – Present</p>
     <ul>
       <li>End-to-end ownership of OSS inventory and orchestration platforms</li>
-      <li>Key contributor to migration from Ericsson Granite to open-source inventory</li>
-      <li>Designed reconciliation strategies to eliminate inventory drift</li>
-      <li>Performed deep RCA and implemented permanent fixes for recurring issues</li>
-      <li>Developed PL/SQL automation to reduce manual effort and repeat incidents</li>
-      <li>Built unified dashboards for inventory health, orders, and alarms</li>
+      <li>Major migration from Ericsson Granite to open-source inventory</li>
+      <li>Designed reconciliation strategies to eliminate data drift</li>
+      <li>Built unified dashboards for inventory, orders, and alarms</li>
+      <li>Automation using PL/SQL reduced repeat incidents</li>
     </ul>
   </div>
 
   <div class="card">
     <h3>Tata Consultancy Services</h3>
-    <p class="role">OSS Support Engineer (Offshore & Onsite – Saudi Arabia) | 2019 – 2022</p>
+    <p class="role">OSS Engineer (Offshore & Onsite – Saudi Arabia)</p>
     <ul>
-      <li>Supported large-scale OSS fulfillment and inventory systems</li>
-      <li>Handled complex customer-impacting production incidents</li>
-      <li>Worked closely with client teams to stabilize OSS operations</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Reliance Jio Infocomm Limited</h3>
-    <p class="role">OSS Support Engineer | 2015 – 2019</p>
-    <ul>
-      <li>Supported Microwave, POI, Small Cells, and OSP/ISP inventory domains</li>
-      <li>Investigated incidents using logs, SQL validation, and workflow analysis</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h3>Early Career – GIS & Telecom Systems</h3>
-    <ul>
-      <li>Worked on GIS mapping, network inventory creation, and rollout support</li>
-      <li>Built strong fundamentals in data accuracy and telecom workflows</li>
+      <li>Supported large OSS inventory & fulfillment systems</li>
+      <li>Handled customer-critical production incidents</li>
     </ul>
   </div>
 </section>
@@ -99,10 +84,10 @@
 <section class="section">
   <h2>Operational Impact</h2>
   <div class="impact-grid">
-    <div class="impact">Prevented revenue leakage by identifying issue patterns</div>
-    <div class="impact">Ensured customer delivery timelines for live services</div>
-    <div class="impact">Reduced MTTR through automation and permanent fixes</div>
-    <div class="impact">Improved inventory trust across OSS platforms</div>
+    <div class="impact">Prevented revenue leakage</div>
+    <div class="impact">Ensured delivery timelines</div>
+    <div class="impact">Reduced MTTR</div>
+    <div class="impact">Improved inventory trust</div>
   </div>
 </section>
 
@@ -114,10 +99,9 @@
     <span>Inventory Platforms</span>
     <span>Ericsson Granite</span>
     <span>Open Source Inventory</span>
-    <span>Inventory Reconciliation</span>
-    <span>OSS Orchestration</span>
     <span>PL/SQL</span>
     <span>Neo4j</span>
+    <span>OSS Orchestration</span>
     <span>Automation & RCA</span>
   </div>
 </section>
@@ -126,7 +110,7 @@
 <section class="section">
   <h2>Education</h2>
   <div class="card">
-    <strong>Bachelor of Technology – Electronics & Communication Engineering</strong><br>
+    <strong>B.Tech – Electronics & Communication Engineering</strong><br>
     Sri Sai Aditya Institute of Science and Technology (JNTU-K)<br>
     2007 – 2011
   </div>
@@ -135,10 +119,19 @@
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section contact">
   <h2>Contact</h2>
-  <p>
-    Open to discussions around OSS inventory platforms,
-    transformations, and senior engineering opportunities.
-  </p>
+
+  <form class="contact-form">
+    <label>Name</label>
+    <input type="text" placeholder="Your name">
+
+    <label>Email</label>
+    <input type="email" placeholder="Your email">
+
+    <label>Message</label>
+    <textarea placeholder="Your message"></textarea>
+
+    <button type="submit" class="btn primary">Send Message</button>
+  </form>
 </section>
 
 <footer>© 2026 Eswara Rao Raparthi</footer>
