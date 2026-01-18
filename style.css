@@ -1,97 +1,98 @@
 :root {
-  --bg-main: linear-gradient(135deg,#020617,#0f172a);
-  --bg-glass: rgba(255,255,255,.06);
-  --card-bg: rgba(255,255,255,.05);
-  --text-main: #e5e7eb;
   --accent: #38bdf8;
+  --bg-dark: #020617;
+  --glass: rgba(255,255,255,.06);
+  --text: #e5e7eb;
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", system-ui, sans-serif;
-  background: var(--bg-main);
-  color: var(--text-main);
+  background: linear-gradient(135deg,#020617,#0f172a);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui;
 }
 
-.hidden { visibility: hidden; }
-
 /* ================= INTRO MODAL ================= */
-.modal {
+.intro-modal {
   position: fixed;
   inset: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top,rgba(56,189,248,.15),rgba(2,6,23,.95));
   backdrop-filter: blur(18px);
-  background: rgba(2,6,23,.75);
-  opacity: 0;
-  pointer-events: none;
-  transition: .5s ease;
   z-index: 3000;
 }
 
-.modal.show {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.modal-content.cinematic {
-  width: 460px;
-  max-width: 92%;
-  background: linear-gradient(145deg,#020617,#020617);
+.intro-card {
+  width: 420px;
+  max-width: 90%;
+  background: #020617;
   border-radius: 22px;
   padding: 18px;
-  box-shadow: 0 0 80px rgba(56,189,248,.25);
+  box-shadow: 0 0 80px rgba(56,189,248,.35);
+  position: relative;
 }
 
-.video-frame {
-  border-radius: 18px;
+/* CINEMATIC CROP */
+.intro-frame {
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(56,189,248,.3);
+  border: 1px solid rgba(56,189,248,.35);
 }
 
-.video-frame video {
+.intro-frame video {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;   /* 🔥 CROPS RAW CAMERA */
+  transform: scale(1.08); /* 🔥 CINEMATIC ZOOM */
 }
 
-.video-caption {
-  margin-top: 10px;
-  font-size: 13px;
-  opacity: .85;
+/* TEXT OVERLAY */
+.intro-overlay {
+  margin-top: 12px;
   text-align: center;
 }
 
-/* ================= HEADER ================= */
-.top-header {
-  position: sticky;
-  top: 0;
-  background: rgba(10,15,30,.75);
-  backdrop-filter: blur(10px);
-  padding: 12px 18px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 1000;
+.intro-overlay h2 {
+  margin: 6px 0 2px;
 }
 
-.header-actions a,
-.theme-toggle {
-  margin-left: 12px;
+.intro-overlay p {
+  font-size: 13px;
+  opacity: .85;
+}
+
+/* SKIP BUTTON */
+.skip-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 16px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 12px;
 }
 
 /* ================= HERO ================= */
+.hidden { display: none; }
+
 .hero {
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
 .hero-card {
   max-width: 900px;
   margin: auto;
-  background: var(--bg-glass);
+  background: var(--glass);
   border-radius: 22px;
-  padding: 40px 26px;
+  padding: 42px;
   text-align: center;
 }
 
@@ -101,11 +102,10 @@ body {
 }
 
 .profile-pic {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #020617;
 }
 
 .profile-ring {
@@ -117,47 +117,15 @@ body {
   z-index: -1;
 }
 
-/* ================= SECTIONS ================= */
-.section {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.glass {
-  background: var(--bg-glass);
-  border-radius: 18px;
-  padding: 30px;
-}
-
-/* ================= CONTACT ================= */
-.contact-advanced {
-  text-align: center;
-}
-
-.contact-sub {
-  max-width: 620px;
-  margin: auto;
-  opacity: .85;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px;
+/* ================= BUTTON ================= */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
   border-radius: 10px;
-  border: none;
-  font-size: 14px;
+  text-decoration: none;
 }
 
-.btn.big {
-  margin-top: 16px;
-  padding: 14px 28px;
-  font-size: 15px;
+.secondary {
+  border: 1px solid var(--accent);
+  color: var(--accent);
 }
