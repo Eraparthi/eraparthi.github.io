@@ -1,3 +1,4 @@
+// THEME
 function toggleTheme() {
   const html = document.documentElement;
   html.setAttribute(
@@ -6,12 +7,15 @@ function toggleTheme() {
   );
 }
 
+// VIDEO POPUP
 window.onload = () => {
-  document.getElementById("introModal").style.display = "flex";
-};
-
-function closeIntro() {
+  const modal = document.getElementById("introModal");
   const video = document.getElementById("introVideo");
-  video.pause();
-  document.getElementById("introModal").style.display = "none";
-}
+
+  modal.style.display = "flex";
+  video.play();
+
+  video.onended = () => {
+    modal.style.display = "none";
+  };
+};
