@@ -1,170 +1,136 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Eswara Rao Raparthi | OSS & Inventory SME</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-        content="Senior OSS L3 Operations & Inventory SME specializing in inventory platforms, migrations, automation, and operational excellence." />
-  <link rel="stylesheet" href="style.css" />
+        content="Senior OSS L3 Operations & Inventory SME specializing in OSS stability, inventory platforms, migrations, and automation.">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- ================= INTRO VIDEO MODAL ================= -->
 <div id="introModal" class="modal">
-  <div class="modal-card animate">
-    <button class="skip-btn" onclick="closeIntro()">Skip</button>
-
-    <div class="video-container">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeIntro()">Skip</button>
+    <div class="video-wrapper">
       <video id="introVideo" controls playsinline>
         <source src="intro.MOV" type="video/quicktime">
       </video>
     </div>
-
-    <p class="intro-caption">
-      A short introduction before you explore my professional journey
+    <p class="modal-caption">
+      A short introduction before you explore my professional profile
     </p>
   </div>
 </div>
 
 <!-- ================= HEADER ================= -->
-<header class="top-header">
-  <div class="site-name">Eswara Rao Raparthi</div>
-
+<header class="header">
   <div class="header-actions">
-    <a href="https://www.linkedin.com"
-       target="_blank"
-       class="linkedin-icon"
-       title="LinkedIn">in</a>
+    <a href="https://www.linkedin.com" target="_blank" class="icon-btn">in</a>
 
-    <a href="Eswara Raparthi Latest Resume.docx"
-       class="btn outline">
+    <a href="Eswara Raparthi Latest Resume.docx" class="btn outline">
       Resume
     </a>
 
-    <button class="theme-toggle" onclick="toggleTheme()">Theme</button>
+    <a href="#contact" class="btn outline">
+      Contact
+    </a>
+
+    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
   </div>
 </header>
 
 <!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="hero-card animate">
-    <img src="profile.jpg" class="profile-pic" alt="Profile Photo">
+  <img src="profile.jpg" alt="Profile Photo" class="profile-pic">
 
-    <h1>Senior OSS L3 Operations & Inventory SME</h1>
+  <h1>Eswara Rao Raparthi</h1>
+  <h2>Senior OSS L3 Operations & Inventory SME</h2>
 
-    <p class="hero-desc">
-      Driving large-scale inventory platforms, OSS stability, and complex migrations
-      through deep operational expertise, automation, and data integrity.
-    </p>
-  </div>
+  <p class="hero-text">
+    Specializing in OSS stability, inventory platforms, large-scale migrations,
+    reconciliation, and automation to ensure reliable service delivery.
+  </p>
 </section>
 
-<!-- ================= CURRENT ROLE / CASE STUDY ================= -->
+<!-- ================= CASE STUDY ================= -->
 <section class="section">
-  <h3 class="section-title">Current Role & Key Case Study</h3>
-
-  <div class="glass card animate">
-    <h4>Unified OSS Inventory & Operations Platform</h4>
+  <h3>Key Case Study</h3>
+  <div class="card">
     <ul>
-      <li>Designed and delivered a unified operational dashboard for inventory, orders, and alarms.</li>
-      <li>Played a key role in migrating inventory from Ericsson Granite to an open-source platform.</li>
-      <li>Implemented reconciliation and automation to improve data accuracy and prevent revenue loss.</li>
+      <li>Built a unified operational dashboard across inventory, orders, and alarms</li>
+      <li>Played a key role in migrating inventory from Ericsson Granite to open-source platforms</li>
+      <li>Implemented reconciliation and automation to improve data accuracy and prevent revenue leakage</li>
     </ul>
   </div>
 </section>
 
 <!-- ================= OPERATIONAL IMPACT ================= -->
 <section class="section">
-  <h3 class="section-title">Operational Impact</h3>
-
-  <div class="metrics-grid">
-    <div class="metric-card animate">Prevented revenue leakage by identifying recurring inventory inconsistencies</div>
-    <div class="metric-card animate">Ensured on-time customer service delivery by resolving critical issues within SLA</div>
-    <div class="metric-card animate">Reduced manual effort through automation and repeatable fixes</div>
-    <div class="metric-card animate">Improved operational confidence using proactive dashboards and insights</div>
+  <h3>Operational Impact</h3>
+  <div class="impact-grid">
+    <div class="impact-card">Prevented revenue leakage through early issue detection</div>
+    <div class="impact-card">Ensured on-time service delivery within committed timelines</div>
+    <div class="impact-card">Reduced manual effort using automation and repeatable fixes</div>
+    <div class="impact-card">Improved inventory reliability and operational confidence</div>
   </div>
 </section>
 
 <!-- ================= CORE EXPERTISE ================= -->
 <section class="section">
-  <h3 class="section-title">Core Expertise</h3>
-
+  <h3>Core Expertise</h3>
   <div class="expertise-grid">
     <span>OSS L3 Operations</span>
     <span>Inventory Platforms</span>
     <span>Ericsson Granite</span>
     <span>Open Source Inventory</span>
     <span>Inventory Reconciliation</span>
-    <span>Automation (PL/SQL)</span>
-    <span>Neo4j Graph Database</span>
     <span>OSS Orchestration</span>
-    <span>Migration & Data Integrity</span>
+    <span>PL/SQL</span>
+    <span>Neo4j</span>
+    <span>Automation & RCA</span>
   </div>
 </section>
 
 <!-- ================= EXPERIENCE ================= -->
 <section class="section">
-  <h3 class="section-title">Professional Experience</h3>
+  <h3>Professional Experience</h3>
 
-  <div class="card animate">
-    <h4>Jio Platforms Limited</h4>
-    <p>
-      Senior OSS & Inventory Engineer responsible for platform stability,
-      complex incident resolution, migrations, and automation initiatives
-      across large-scale telecom environments.
-    </p>
+  <div class="card">
+    <strong>Jio Platforms Limited</strong><br>
+    Senior OSS & Inventory Engineer responsible for platform stability,
+    complex issue resolution, migrations, and automation initiatives.
   </div>
 
-  <div class="card animate">
-    <h4>Tata Consultancy Services</h4>
-    <p>
-      Supported OSS inventory and fulfillment platforms in offshore and onsite environments,
-      contributing to stable operations, customer confidence, and structured issue resolution.
-    </p>
+  <div class="card">
+    <strong>Tata Consultancy Services</strong><br>
+    OSS inventory and fulfillment support across offshore and onsite engagements,
+    contributing to stable operations and customer confidence.
   </div>
 
-  <div class="card animate">
-    <h4>Early Career</h4>
-    <p>
-      Built strong foundations in telecom systems, data modeling, and operational support,
-      enabling a smooth progression into advanced OSS and inventory roles.
-    </p>
+  <div class="card">
+    <strong>Early Career</strong><br>
+    Built strong fundamentals in telecom systems, data modeling, and operations support.
   </div>
 </section>
 
 <!-- ================= EDUCATION ================= -->
 <section class="section">
-  <h3 class="section-title">Education</h3>
-
-  <div class="card animate">
-    <strong>Bachelor’s Degree in Engineering</strong>
-    <p>
-      Strong grounding in systems, databases, and analytical problem-solving.
-    </p>
+  <h3>Education</h3>
+  <div class="card">
+    Bachelor’s Degree in Engineering
   </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-<section class="section">
-  <h3 class="section-title">Contact</h3>
-
-  <div class="glass contact-box animate">
-    <p class="contact-line">
-      Open to conversations around OSS platforms, inventory transformations,
-      and senior engineering opportunities.
-    </p>
-
-    <form class="contact-form" onsubmit="sendMail(event)">
-      <div class="form-row">
-        <input id="name" placeholder="Your Name" required>
-        <input id="email" type="email" placeholder="Email" required>
-      </div>
-      <textarea id="message" placeholder="Your message"></textarea>
-      <button class="btn primary large">Send Message</button>
-    </form>
-  </div>
+<section id="contact" class="section contact">
+  <h3>Contact</h3>
+  <p class="contact-text">
+    Open to discussions on OSS platforms, inventory transformations,
+    and senior engineering opportunities.
+  </p>
 </section>
 
 <footer>
