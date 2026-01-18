@@ -11,4 +11,4 @@ function toggleTheme() {
   const html = document.documentElement;
   const theme = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
   html.setAttribute("data-theme", theme);
-}
+} 
